@@ -1,0 +1,635 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "苹方 常规";
+}
+body{
+    background-color: #f4f4f4;
+}
+/*头部开始*/
+.weatherbox{
+    width: 100%;
+    height: 9.4rem;
+    background: -webkit-linear-gradient(-90deg,#313877,#44abec);
+}
+header{
+    width: 100%;
+    height: 0.8rem;
+    /*background: red;*/
+    overflow: hidden;
+}
+.headerleft{
+    position: absolute;
+    height: 0.44rem;
+    width: 0.44rem;
+    top: 0.3rem;
+    left: 0.16rem;
+    background: url("../img/left.svg") no-repeat;
+}
+.headerright{
+    position: absolute;
+    right: 0.16rem;
+    top: 0.3rem;
+    width: 0.44rem;
+    height: 0.44rem;
+    background: url("../img/right.svg") no-repeat;
+}
+.headerz{
+    height: 0.32rem;
+    line-height: 0.32rem;
+    width: 76%;
+    margin: 0.36rem 12% 0.12rem;
+    font-size: 0.32rem;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.gps{
+    display: inline-block;
+    height: 0.32rem;
+    width: 0.32rem;
+    vertical-align: middle;
+    margin-top: -0.04rem;
+    margin-right: 0.08rem;
+    background-size: 0.32rem;
+    background: url("../img/gps.svg") no-repeat;
+}
+.weatherbottom{
+    width: 100%;
+    height: 8.6rem;
+    /*background: url("../img/ws.png") no-repeat;*/
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    top: -0.28rem;
+}
+.weatherbottom1{
+    width: 100%;
+    height: 8.6rem;
+    background-image: url("../img/ws.png");
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.weatherbottom2{
+    width: 100%;
+    height: 8.6rem;
+    background-image: url("../img/hu.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.weatherbottom3{
+     width: 100%;
+    height: 8.6rem;
+    background-image: url("../img/feng.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.weatherbox .kqzl{
+    background-color: #a3d765;
+    box-shadow: 0 0.02rem 0.02rem 0 rgba(0,0,0,.12);
+    /*height: 0.88rem;*/
+    padding: 0.16rem 0.24rem;
+    position: absolute;
+    border-radius: 0.16rem;
+    top: 1.34rem;
+    left: 0.16rem;
+    z-index: 2;
+}
+.sq{
+    opacity: 0.8;
+    font-size: 0.24rem;
+    color: #fff;
+    line-height: 0.24rem;
+    height: 0.24rem;
+    margin-bottom: 0.06rem;
+}
+.you{
+    margin-top: 0.04rem;
+    font-size: 0.24rem;
+    color: #fff;
+    height: 0.28rem;
+    line-height: 0.28rem;
+}
+.du{
+    font-size: 1.24rem;
+    color: #fff;
+    line-height: 1.24rem;
+    height: 1.24rem;
+    /*margin-top: 66px;*/
+    position: absolute;
+    left: 0.4rem;
+    right: 0;
+    margin: 1.52rem auto 0;
+    text-align: center;
+    display: block;
+}
+.dy{
+    font-size: 0.44rem;
+    color: #fff;
+    line-height: 0.44rem;
+    height: 0.44rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+    top: 3.64rem;
+}
+.xf{
+    /*margin-top: 0.2rem;*/
+    height: 0.28rem;
+    position: relative;
+    text-align: center;
+    top: 3.6rem;
+}
+.txt{
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.show{
+    display: none;
+}
+.call{
+    font-size: 0.32rem;
+    color: #fff;
+    height: 0.32rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5.8rem;
+    margin: 0 auto;
+    z-index: 2;
+    text-align: center;
+}
+/*头部结束*/
+/*天气详情开始*/
+.tqxq{
+    width: 100%;
+    height: 2.06rem;
+    background: white;
+    padding-top: 0.52rem;
+    border-bottom: 0.02rem solid #e4e4e4;
+    margin-bottom: 0.2rem;
+    position: relative;
+    box-sizing: border-box;
+}
+.tqxq-left{
+    float: left;
+    width: 50%;
+    height: 1.04rem;
+    font-size: 0.28rem;
+    color: #434343;
+    line-height: 0.28rem;
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+    border-right: 0.02rem solid #f0f0f0;
+}
+.tqxql-top{
+    height: 0.28rem;
+    width: auto;
+    margin-bottom: 0.26rem;
+}
+.day{
+    float: left;
+}
+.wd{
+    float: right;
+}
+.tqxql-bottom{
+    height: 0.44rem;
+    width: auto;
+}
+.dyzq{
+    float: left;
+    height: 0.44rem;
+    line-height: 0.44rem;
+}
+.tqxql-bottom img{
+    display: block;
+    float: right;
+    height: 0.44rem;
+    width: 0.44rem;
+}
+.tqxq-right{
+    border-right: none;
+}
+/*天气详情结束*/
+/*24小时开始*/
+.days{
+    width: 100%;
+    height: 2.72rem;
+    border-bottom: 0.02rem solid #e4e4e4;
+    background-color: #fff;
+    margin-bottom: 0.2rem;
+    padding-top: 0.6rem;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.dayh{
+    width: 400%;
+    /*height: 2.72rem;*/
+    /*background: red;*/
+}
+.dayul{
+    width: 100%;
+    height: 1.6rem;
+    /*background: red;*/
+    display: flex;
+    justify-content: space-between;
+}
+.dayli{
+    width: 3.84615%;
+    /*height: 80px;*/
+    /*background: pink;*/
+}
+.dayp{
+    font-size: 0.24rem;
+    line-height: 0.23rem;
+    height: 0.24rem;
+    color: #999999;
+    text-align: center;
+}
+.dayul .dayli img{
+    height: 0.48rem;
+    width: 0.48rem;
+    display: block;
+    margin: 0.3rem auto;
+}
+.dayx{
+    font-size: 0.28rem;
+    color: #434343;
+    line-height: 0.28rem;
+    height: 0.28rem;
+    text-align: center;
+}
+/*24小时结束*/
+/*一周开始*/
+.weeks{
+    border-top: 0.02rem solid #e4e4e4;
+    border-bottom: 0.02rem solid #e4e4e4;
+    background-color: #fff;
+    height: 7.82rem;
+    padding-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    position: relative;
+    overflow: auto;
+    box-sizing: border-box;
+}
+.week{
+    width: 10rem;
+    height: 6.84rem;
+}
+.weekkul{
+        display: flex;
+    justify-content: space-between;
+}
+.weekul{
+    width: 1.25rem;
+    height: 6.84rem;
+}
+.weekp{
+    color: #b2b2b2;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    height: 0.24rem;
+    text-align: center;
+}
+.weekpp{
+    color: #b2b2b2;
+    margin: 0.1rem 0 0.3rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    height: 0.24rem;
+    text-align: center;
+}
+.weekppk{
+    font-size: 0.28rem;
+    color: #b2b2b2;
+    line-height: 0.28rem;
+    height: 0.28rem;
+    margin-bottom: 0.28rem;
+    text-align: center;
+}
+.weeks .week .weekul img{
+    width: 0.48rem;
+    height: 0.48rem;
+    display: block;
+    margin: 0 auto;
+}
+.weekx{
+    margin-top: 2.72rem;
+}
+.weekdy{
+    font-size: 0.28rem;
+    color: #b2b2b2;
+    line-height: 0.28rem;
+    height: 0.28rem;
+    margin: 0.32rem 0 0.4rem;
+    text-align: center;
+}
+.weekbp{
+    font-size: 0.24rem;
+    color: #b2b2b2;
+    line-height: 0.24rem;
+    height: 0.24rem;
+    width: 0.8rem;
+    margin: 0 auto 0.12rem;
+    overflow: hidden;
+    text-align: center;
+}
+.weekppk1{
+    color: #434343;
+}
+.weekzx{
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2.72rem;
+    top: 2.42rem;
+    width: 10rem;
+    background: pink;
+}
+/*一周结束*/
+/*出行建议开始*/
+.advise{
+    width: auto;
+    height: 4.16rem;
+}
+.advise-top{
+    width: auto;
+    height: 3.8rem;
+    overflow: auto;
+}
+.advisediv{
+    width: 15rem;
+    height: 3.8rem;
+    overflow: hidden;
+}
+.adviseul{
+    width: 7.5rem;
+    height: 3.8rem;
+}
+.adviseli{
+    background-color: #fff;
+    float: left;
+    text-align: center;
+    width: 25%;
+    height: 1.88rem;
+    border-right: 0.02rem solid #e6e6e6;
+    border-bottom: 0.02rem solid #e6e6e6;
+    box-sizing: border-box;
+}
+.spanbj{
+    height: 0.48rem;
+    width: 0.48rem;
+    display: block;
+    margin: 0.3rem auto 0.2rem;
+    background-size: 0.48rem;
+    background-image: url("../img/qc.svg");
+}
+.spanbj1{
+    background-image: url("../img/yf.svg");
+}
+.spanbj2{
+    background-image: url("../img/shasha.svg");
+}
+.spanbj3{
+    background-image: url("../img/yao.svg");
+}
+.spanbj4{
+    background-image: url("../img/xc.svg");
+}
+.spanbj5{
+    background-image: url("../img/yd.svg");
+}
+.spanbj6{
+    background-image: url("../img/tty.svg");
+}
+.spanbj7{
+    background-image: url("../img/yu.svg");
+}
+.spanbj8{
+    background-image: url("../img/ly.svg");
+}
+.spanbj9{
+    background-image: url("../img/jt.svg");
+}
+.spanbj10{
+    background-image: url("../img/tu.svg");
+}
+.spanbj11{
+    background-image: url("../img/xl.svg");
+}
+.spanbj12{
+    background-image: url("../img/yj.svg");
+}
+.spanbj13{
+    background-image: url("../img/hz.svg");
+}
+.spanbj14{
+    background-image: url("../img/dl.svg");
+}
+.spanbj15{
+    background-image: url("../img/bz.svg");
+}
+.advisep{
+    font-size: 0.28rem;
+    color: #434343;
+    line-height: 0.28rem;
+    height: 0.28rem;
+    margin-bottom: 0.12rem;
+}
+.advisepp{
+    font-size: 0.28rem;
+    color: #999;
+    height: 0.24rem;
+    line-height: 0.24rem;
+}
+.adviseli1{
+    border-bottom: none;
+}
+.advise-bottom{
+    width: 100%;
+    height: 0.36rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.16rem;
+    box-sizing: border-box;
+}
+.advise .advise-bottom span{
+    display: inline-block;
+    width: 0.2rem;
+    height: 0.06rem;
+    background: #e3e3e3;
+    border-radius: 0.06rem;
+    margin: 0 0.1rem;
+}
+.advise .advise-bottom .advisesp{
+    background: #cecece!important;
+}
+/*出行建议结束*/
+/*底部开始*/
+footer{
+    width: 100%;
+    height: 1.74rem;
+    font-size: 0.24rem;
+    padding: 0.3rem 0;
+    text-align: center;
+    color: #b2b2b2;
+    box-sizing: border-box;
+}
+.footop{
+    height: 0.52rem;
+    line-height: 0.52rem;
+    display: inline-block;
+}
+footer .footop a{
+    height: 0.52rem;
+    line-height: 0.52rem;
+    display: inline-block;
+    color: #b2b2b2;
+}
+footer .footop a:first-child{
+    margin-right: 0.56rem;
+}
+footer .footop a:nth-child(2)::after{
+    content: "";
+    background: #b2b2b2;
+    width: 0.02rem;
+    height: 0.24rem;
+    display: inline-block;
+    vertical-align: -0.02rem;
+    color: #b2b2b2;
+    margin: 0 0.24rem;
+}
+.bq{
+    height: 0.52rem;
+    line-height: 0.52rem;
+}
+/*底部结束*/
+/*隐藏开始*/
+.yc{
+    position: fixed;
+    z-index: 5;
+    top: -100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    height: 100%;
+    transition: all .2s linear;
+}
+.yctop{
+    height: 0.9rem;
+    padding: 0.14rem 0;
+    position: relative;
+    border-bottom: 0.02rem solid #eee;
+    box-sizing: border-box;
+}
+.yctopi{
+    position: relative;
+    margin-right: 1.2rem;
+    margin-left: 0.26rem;
+    height: 0.6rem;
+}
+.yc .yctop .yctopi input{
+    width: 100%;
+    height: 0.6rem;
+    padding: 0.1rem 0 0.1rem 0.64rem;
+    box-sizing: border-box;
+    line-height: 0.48rem;
+    background: #f2f2f2;
+    border-radius: 0.88rem;
+    font-size: 0.28rem;
+    color: #434343;
+    border-width: 0;
+    position: absolute;
+    outline: none;
+}
+.ycicon{
+    position: absolute;
+    height: 0.28rem;
+    width: 0.28rem;
+    top: 0.16rem;
+    left: 0.2rem;
+    background-size: 0.28rem;
+    z-index: 2;
+    background-image: url("../img/ss.svg");
+}
+.ycqx{
+    float: right;
+    font-size: 0.28rem;
+    color: #434343;
+    width: 1.2rem;
+    line-height: 0.6rem;
+    text-align: center;
+    position: absolute;
+    top: 0.16rem;
+    right: 0;
+    cursor: pointer;
+}
+.ycbottom{
+    padding: 0.24rem 0.26rem 0.14rem;
+    position: absolute;
+    top: 0.9rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+.yc .ycbottom h2{
+    font-size: 0.32rem;
+    color: #434343;
+    height: 0.44rem;
+    line-height: 0.4rem;
+    margin: 0.2rem 0;
+    font-weight: 400;
+}
+.ycul{
+    width: 100%;
+    height: 3.52rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ycli{
+    box-sizing: border-box;
+    background: #f2f2f2;
+    border-radius: 0.88rem;
+    padding: 0 0.32rem;
+    width: 32%;
+    height: 0.64rem;
+    line-height: 0.64rem;
+    margin-bottom: 0.24rem;
+    font-size: 0.28rem;
+    color: #434343;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ycul1{
+    height: 2.64rem;
+}
+/*隐藏结束*/
